@@ -1,0 +1,24 @@
+<div class="overflow-hidden rounded border border-zinc-200 bg-white">
+  <table class="w-full text-left text-sm">
+    <thead class="bg-zinc-100 text-zinc-600">
+      <tr>
+        <th class="px-4 py-3">SKU</th>
+        <th class="px-4 py-3">Producto</th>
+        <th class="px-4 py-3 text-right">Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+      <tr class="border-t border-zinc-100">
+        <td class="px-4 py-3 font-mono">{{ product.sku }}</td>
+        <td class="px-4 py-3">{{ product.name }}</td>
+        <td class="px-4 py-3 text-right">{{ product.stock }}</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td class="px-4 py-6 text-center text-zinc-500" colspan="3">No hay productos registrados.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

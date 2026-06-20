@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Rust ERP{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.0"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.10"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.12/dist/cdn.min.js"></script>
+  </head>
+  <body class="bg-zinc-50 text-zinc-950">
+    <nav class="border-b border-zinc-200 bg-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="/" class="text-lg font-semibold">Rust ERP</a>
+        <div class="flex gap-4 text-sm">
+          <a class="hover:text-emerald-700" href="/accounting">Contabilidad</a>
+          <a class="hover:text-emerald-700" href="/inventory">Inventario</a>
+          <a class="hover:text-emerald-700" href="/invoicing">Facturación</a>
+        </div>
+      </div>
+    </nav>
+    <main class="mx-auto max-w-6xl px-4 py-8">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

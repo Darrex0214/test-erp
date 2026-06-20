@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Inventario · Rust ERP{% endblock %}
+{% block content %}
+<section class="space-y-6">
+  <div>
+    <h1 class="text-2xl font-semibold">Productos</h1>
+    <p class="mt-1 text-sm text-zinc-600">Consulta de stock actual por SKU.</p>
+  </div>
+  <div id="products" hx-get="/inventory/products" hx-trigger="refresh-products from:body">
+    {% include "inventory/product-list.html" %}
+  </div>
+</section>
+{% endblock %}
