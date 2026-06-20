@@ -38,6 +38,15 @@ cargo check --workspace
 cargo test --workspace
 ```
 
+## Documentación técnica
+
+- [Stack y versiones](docs/stack.md)
+- [Arquitectura](docs/architecture.md)
+- [Guía para crear módulos](docs/module-guide.md)
+- [Flujo de peticiones](docs/request-flow.md)
+- [Base de datos](docs/database.md)
+- [Entorno de desarrollo](docs/development.md)
+
 ## Módulos iniciales
 
 - Contabilidad: cuentas, asientos contables, partida doble y eventos de asiento publicado.
