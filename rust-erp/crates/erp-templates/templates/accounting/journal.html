@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Contabilidad · Rust ERP{% endblock %}
+{% block content %}
+<section class="space-y-6">
+  <div>
+    <h1 class="text-2xl font-semibold">Asiento contable</h1>
+    <p class="mt-1 text-sm text-zinc-600">Registra un asiento simple con una partida de débito y una de crédito.</p>
+  </div>
+  <form class="grid gap-3 rounded border border-zinc-200 bg-white p-4 md:grid-cols-2" hx-post="/accounting/journal-entries" hx-target="#journal-result">
+    <input class="rounded border border-zinc-300 px-3 py-2 md:col-span-2" name="description" placeholder="Descripción" required>
+    <input class="rounded border border-zinc-300 px-3 py-2" name="debit_account_id" placeholder="UUID cuenta débito" required>
+    <input class="rounded border border-zinc-300 px-3 py-2" name="credit_account_id" placeholder="UUID cuenta crédito" required>
+    <input class="rounded border border-zinc-300 px-3 py-2" name="amount" placeholder="100.00" required>
+    <select class="rounded border border-zinc-300 px-3 py-2" name="currency">
+      <option>USD</option>
+      <option>EUR</option>
+      <option>MXN</option>
+    </select>
+    <button class="rounded bg-emerald-700 px-4 py-2 font-medium text-white md:col-span-2" type="submit">Publicar asiento</button>
+  </form>
+  <div id="journal-result" class="text-sm text-zinc-700"></div>
+</section>
+{% endblock %}

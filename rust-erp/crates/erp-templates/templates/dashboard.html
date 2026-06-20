@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · Rust ERP{% endblock %}
+{% block content %}
+<section class="grid gap-4 md:grid-cols-3">
+  <a class="rounded border border-zinc-200 bg-white p-5 shadow-sm hover:border-emerald-500" href="/accounting">
+    <h1 class="text-xl font-semibold">Contabilidad</h1>
+    <p class="mt-2 text-sm text-zinc-600">Asientos, libro mayor y partida doble.</p>
+  </a>
+  <a class="rounded border border-zinc-200 bg-white p-5 shadow-sm hover:border-emerald-500" href="/inventory">
+    <h1 class="text-xl font-semibold">Inventario</h1>
+    <p class="mt-2 text-sm text-zinc-600">Productos, SKU y movimientos de stock.</p>
+  </a>
+  <a class="rounded border border-zinc-200 bg-white p-5 shadow-sm hover:border-emerald-500" href="/invoicing">
+    <h1 class="text-xl font-semibold">Facturación</h1>
+    <p class="mt-2 text-sm text-zinc-600">Facturas, clientes y notas comerciales.</p>
+  </a>
+</section>
+{% endblock %}
