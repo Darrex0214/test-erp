@@ -1,0 +1,6 @@
+/target/
+/.env
+/.sqlx/
+*.pdb
+*.profraw
+Cargo.lock

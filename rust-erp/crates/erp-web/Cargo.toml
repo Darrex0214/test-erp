@@ -1,0 +1,16 @@
+[package]
+name = "erp-web"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+axum.workspace = true
+erp-application = { path = "../erp-application" }
+erp-domain = { path = "../erp-domain" }
+erp-templates = { path = "../erp-templates" }
+rust_decimal.workspace = true
+serde.workspace = true
+uuid.workspace = true
